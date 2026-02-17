@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "ts-node src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "test": "ts-mocha src/**/*.test.ts --timeout 10000",
+    "test:watch": "ts-mocha src/**/*.test.ts --watch --watch-extensions ts",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\""
   },
   "keywords": [],
   "author": "",
